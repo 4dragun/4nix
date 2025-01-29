@@ -24,6 +24,7 @@
     ];
     file = {
       "./.config/uwsm/env".source = ./confz/uwsm/env;
+      "./.config/starship.toml".source = ./confz/starship.toml;
     };
   };
   
@@ -35,6 +36,7 @@
     fastfetch.enable = true;
     btop.enable = true;
     mpv.enable = true;
+    starship.enable = true;
   };
 
   imports = [
@@ -46,8 +48,7 @@
     ./modulez/kitty.nix
     ./modulez/git.nix
     ./modulez/fuzzel.nix
-    ./modulez/zsh.nix
-    # ./modulez/fish.nix
+    ./modulez/fish.nix
     # ./modulez/oh-my-posh.nix
   ];
 

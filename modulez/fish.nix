@@ -8,7 +8,7 @@
         exec uwsm start hyprland-uwsm.desktop
       end
       set -U fish_greeting
-      oh-my-posh init fish | source
+      # oh-my-posh init fish | source
     ";
     shellAliases = {
       "ls"  = "lsd";

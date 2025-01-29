@@ -3,6 +3,6 @@
 {
   programs.oh-my-posh = {
     enable = true;
-    useTheme = "M365Princess";
+    useTheme = "powerlevel10k_rainbow";
   };
 }
