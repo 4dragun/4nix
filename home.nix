@@ -46,8 +46,9 @@
     ./modulez/kitty.nix
     ./modulez/git.nix
     ./modulez/fuzzel.nix
-    ./modulez/oh-my-posh.nix
-    ./modulez/fish.nix
+    ./modulez/zsh.nix
+    # ./modulez/fish.nix
+    # ./modulez/oh-my-posh.nix
   ];
 
   gtk = {

@@ -14,17 +14,17 @@ background {
 input-field {
     size = 0, 70
     outline_thickness = 2
-    inner_color = rgba(30, 30, 46, 1.0)
-    outer_color = rgba(f5c2e7ee) rgba(b4befeee) 45deg
-    check_color = rgba(89dbebee) rgba(f9e2afee) 120deg
+    inner_color = rgba(29, 32, 33, 1.0)
+    outer_color = rgba(83a598ee) rgba(d3869bee) 45deg
+    check_color = rgba(83a598ee) rgba(d3869bee) 120deg
     font_family = JetBrainsMono Nerd Font
-    font_color = rgb(143, 143, 143)
+    font_color = rgb(142, 192, 124)
     fade_on_empty = true
     position = 0, -60
 }
 label {
     text = Hi there, $USER
-    color = rgba(249, 226, 175, 1.0)
+    color = rgba(142, 192, 124, 1.0)
     font_size = 20
     font_family = JetBrainsMono Nerd Font Bold Italic
     position = 0, 10
@@ -33,7 +33,7 @@ label {
 }
 label {
     text = $TIME
-    color = rgba(245, 194, 231, 1.0)
+    color = rgba(184, 187, 38, 1.0)
     font_size = 150
     font_family = JetBrainsMono Nerd Font Extrabold
     position = 0, 200

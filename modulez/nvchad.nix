@@ -6,7 +6,10 @@
     backup = false;
     chadrcConfig = "
       local M = {}
-      M.base46 = { theme = 'catppuccin' }
+      M.base46 = {
+        theme = 'gruvbox',
+        transparency = true
+      }
       M.nvdash = { load_on_startup = true }
       M.ui = {
         statusline = {

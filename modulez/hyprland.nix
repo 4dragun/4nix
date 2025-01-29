@@ -17,7 +17,7 @@ exec-once = systemctl --user start hypridle.service
 
 general {
     border_size = 2
-    col.active_border = rgba(f5c2e7ee) rgba(89dbebee) 45deg
+    col.active_border = rgba(81a396ee) rgba(d3869bee) 45deg
     resize_on_border = true
 }
 

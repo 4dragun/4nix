@@ -3,8 +3,8 @@
 {
   stylix = {
     enable = true;
-    base16Scheme = "${pkgs.base16-schemes}/share/themes/catppuccin-mocha.yaml";
-    image = ../wallz/train-sideview.png;
+    base16Scheme = "${pkgs.base16-schemes}/share/themes/gruvbox-dark-hard.yaml";
+    image = ../wallz/5m5kLI9.png;
     polarity = "dark";
     fonts = {
       sizes = {

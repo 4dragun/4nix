@@ -41,11 +41,13 @@
       description = "nixy";
       extraGroups = [ "networkmanager" "wheel" "libvirtd" ];
     };
-    defaultUserShell = pkgs.fish;
+    defaultUserShell = pkgs.zsh;
+    # defaultUserShell = pkgs.fish;
   };
 
   programs = {
-    fish.enable = true;
+    zsh.enable = true;
+    # fish.enable = true;
     virt-manager.enable = true;
     hyprland = {
       enable = true;
