@@ -14,6 +14,9 @@
     };
     syntaxHighlighting = {
       enable = true;
+      styles = {
+        comment = "fg=red,bold";
+      };
       highlighters = [
         "main"
         "brackets"
