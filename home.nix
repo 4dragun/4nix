@@ -24,7 +24,6 @@
     ];
     file = {
       "./.config/uwsm/env".source = ./confz/uwsm/env;
-      "./.config/starship.toml".source = ./confz/starship.toml;
     };
   };
   
@@ -36,7 +35,6 @@
     fastfetch.enable = true;
     btop.enable = true;
     mpv.enable = true;
-    starship.enable = true;
   };
 
   imports = [
@@ -49,7 +47,6 @@
     ./modulez/git.nix
     ./modulez/fuzzel.nix
     ./modulez/fish.nix
-    # ./modulez/oh-my-posh.nix
   ];
 
   gtk = {
@@ -60,10 +57,6 @@
     };
   };
 
-  qt = {
-    enable = true;
-    platformTheme.name = "qtct";
-  };
-  
+  qt.enable = true;
   stylix.targets.hyprlock.enable = false;
 }

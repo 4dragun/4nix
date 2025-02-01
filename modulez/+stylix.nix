@@ -8,7 +8,7 @@
     polarity = "dark";
     fonts = {
       sizes = {
-        terminal = 14;
+        terminal = 13;
         applications = 13;
       };
       monospace = {
