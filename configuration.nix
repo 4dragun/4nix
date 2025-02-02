@@ -3,9 +3,9 @@
 {
   imports = [ 
     ./hardware-configuration.nix
+    ./modulez/+bafish.nix
     ./modulez/+auto-cpufreq.nix
     ./modulez/+stylix.nix
-    ./modulez/+nh.nix
   ];
 
   boot.loader = {
@@ -41,15 +41,17 @@
       description = "nixy";
       extraGroups = [ "networkmanager" "wheel" "libvirtd" ];
     };
-    defaultUserShell = pkgs.fish;
   };
 
   programs = {
-    fish.enable = true;
     virt-manager.enable = true;
     hyprland = {
       enable = true;
       withUWSM  = true;
+    };
+    nh = {
+      enable = true;
+      flake = "/home/nixy/4nix";
     };
   };
 
@@ -58,6 +60,11 @@
       HandlePowerKey=suspend-then-hibernate
       HandleLidSwitch=suspend-then-hibernate
     ";
+    displayManager.sddm = {
+      enable = true;
+      wayland.enable = true;
+      autoNumlock = true;
+    };
     udisks2.enable = true;
     upower.enable = true;
     blueman.enable = true;

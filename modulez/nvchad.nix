@@ -15,7 +15,8 @@
         statusline = {
           theme = 'minimal',
           separator_style = 'round'
-        }
+        },
+        tabufline = { lazyload = false }
       }
       return M
     ";
