@@ -113,7 +113,7 @@ bind = $mainMod, U, exec, uwsm app -- kitty --class clipse udiskie
 bind = $mainMod, B, exec, uwsm app -- kitty --class clipse ~/4nix/scriptz/b.sh
 bind = $mainMod, I, exec, uwsm app -- nautilus
 bind = $mainMod, G, exec, uwsm app -- eog
-bind = $mainMod, L, exec, uwsm app -- hyprlock
+bind = $mainMod, L, exec, uwsm app -- hyprlock &
 bind = $mainMod, H, exec, uwsm app -- hyprpicker -a --format=hex
 bind = $mainMod, N, exec, uwsm app -- kitty nvim
 bind = ,Print, exec, uwsm app -- grimblast save screen
