@@ -21,6 +21,7 @@
       telegram-desktop
       qbittorrent
       git-credential-manager
+      hyprpolkitagent
     ];
     file = {
       "./.config/uwsm/env".source = ./confz/uwsm/env;

@@ -69,6 +69,7 @@
     upower.enable = true;
     blueman.enable = true;
     thermald.enable = true;
+    flatpak.enable = true;
   };
 
   # EDIT THIS STUFFF

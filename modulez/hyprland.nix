@@ -14,6 +14,7 @@ exec-once = uwsm app -- hyprpanel
 exec-once = uwsm app -- swww-daemon
 exec-once = uwsm app -- clipse -listen
 exec-once = systemctl --user start hypridle.service
+exec-once = systemctl --user start hyprpolkitagent.service
 
 general {
     border_size = 2
