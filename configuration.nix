@@ -39,12 +39,11 @@
     users.nixy = {
       isNormalUser = true;
       description = "nixy";
-      extraGroups = [ "networkmanager" "wheel" "libvirtd" ];
+      extraGroups = [ "networkmanager" "wheel" ];
     };
   };
 
   programs = {
-    virt-manager.enable = true;
     hyprland = {
       enable = true;
       withUWSM  = true;
@@ -69,7 +68,6 @@
     upower.enable = true;
     blueman.enable = true;
     thermald.enable = true;
-    flatpak.enable = true;
   };
 
   # EDIT THIS STUFFF
@@ -96,7 +94,6 @@
   };
 
   systemd.sleep.extraConfig = "HibernateDelaySec=30m";
-  virtualisation.libvirtd.enable = true;
   nixpkgs.config.allowUnfree = true;
   nix.settings.experimental-features = [ "nix-command" "flakes" ];
   security.pam.services.hyprlock = {};
