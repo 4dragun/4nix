@@ -4,7 +4,6 @@
   imports = [ 
     ./hardware-configuration.nix
     ./modulez/+bafish.nix
-    ./modulez/+auto-cpufreq.nix
     ./modulez/+stylix.nix
   ];
 
@@ -67,7 +66,7 @@
     udisks2.enable = true;
     upower.enable = true;
     blueman.enable = true;
-    thermald.enable = true;
+    power-profiles-daemon.enable = true;
   };
 
   # EDIT THIS STUFFF
