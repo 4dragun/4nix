@@ -10,6 +10,7 @@
       gnome-boxes
       hyprpanel
       hyprpicker
+      hyprsysteminfo
       brightnessctl
       wl-clipboard
       udiskie
@@ -18,6 +19,7 @@
       nautilus
       pavucontrol
       eog
+      swww
       grimblast
       telegram-desktop
       qbittorrent

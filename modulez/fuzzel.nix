@@ -9,6 +9,7 @@
         terminal = "kitty";
         font = lib.mkForce "JetBrainsMono NF:size=10";
         use-bold = "yes";
+        launch-prefix = "'uwsm app -- '";
       };
       border.width = 2;
     };

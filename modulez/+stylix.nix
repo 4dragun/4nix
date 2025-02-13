@@ -9,7 +9,7 @@
     fonts = {
       sizes = {
         terminal = 13;
-        applications = 13;
+        # applications = 13;
       };
       monospace = {
         package = pkgs.nerd-fonts.jetbrains-mono;
