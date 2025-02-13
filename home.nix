@@ -40,11 +40,14 @@
     fastfetch.enable = true;
     btop.enable = true;
     mpv.enable = true;
+    nvchad = {
+      enable = true;
+      hm-activation = false;
+    };
   };
 
   imports = [
     inputs.nvchad4nix.homeManagerModule
-    ./modulez/nvchad.nix
     ./modulez/kitty.nix
     ./modulez/git.nix
     ./modulez/fuzzel.nix
