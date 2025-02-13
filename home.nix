@@ -7,7 +7,7 @@
     stateVersion = "24.11";
     packages = with pkgs; [
       brave
-      bottles
+      gnome-boxes
       hyprpanel
       hyprpicker
       brightnessctl
