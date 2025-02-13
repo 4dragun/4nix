@@ -43,9 +43,6 @@
   imports = [
     inputs.nvchad4nix.homeManagerModule
     ./modulez/nvchad.nix
-    # ./modulez/hyprland.nix
-    # ./modulez/hypridle.nix
-    # ./modulez/hyprlock.nix
     ./modulez/kitty.nix
     ./modulez/git.nix
     ./modulez/fuzzel.nix

@@ -51,6 +51,7 @@
       enable = true;
       flake = "/home/nixy/4nix";
     };
+    hyprlock.enable = true;
   };
 
   services = {
@@ -66,6 +67,7 @@
     udisks2.enable = true;
     upower.enable = true;
     blueman.enable = true;
+    hypridle.enable = true;
     power-profiles-daemon.enable = true;
   };
 
@@ -95,6 +97,5 @@
   systemd.sleep.extraConfig = "HibernateDelaySec=30m";
   nixpkgs.config.allowUnfree = true;
   nix.settings.experimental-features = [ "nix-command" "flakes" ];
-  security.pam.services.hyprlock = {};
   system.stateVersion = "24.11";
 }
