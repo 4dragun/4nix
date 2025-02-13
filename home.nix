@@ -25,7 +25,8 @@
       hyprpolkitagent
     ];
     file = {
-      "./.config/uwsm/env".source = ./confz/uwsm/env;
+      "./.config/uwsm".source = ./confz/uwsm;
+      "./.config/hypr".source = ./confz/hypr;
     };
   };
   
@@ -42,9 +43,9 @@
   imports = [
     inputs.nvchad4nix.homeManagerModule
     ./modulez/nvchad.nix
-    ./modulez/hyprland.nix
-    ./modulez/hypridle.nix
-    ./modulez/hyprlock.nix
+    # ./modulez/hyprland.nix
+    # ./modulez/hypridle.nix
+    # ./modulez/hyprlock.nix
     ./modulez/kitty.nix
     ./modulez/git.nix
     ./modulez/fuzzel.nix
@@ -60,5 +61,4 @@
   };
 
   qt.enable = true;
-  stylix.targets.hyprlock.enable = false;
 }
