@@ -11,6 +11,7 @@
       "ls"  = "lsd";
       "cat" = "bat";
       "y"   = "yazi";
+      "n"   = "nvim ~/.config/nvim/lua/chadrc.lua";
       "gc"  = "~/4nix/scriptz/gc.sh";
       "gp"  = "~/4nix/scriptz/gp.sh";
       "b"   = "~/4nix/scriptz/b.sh";
