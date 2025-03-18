@@ -3,7 +3,7 @@
 
   inputs = {
     nixpkgs.url = "github:nixos/nixpkgs/nixos-unstable";
-    stylix.url = "github:danth/stylix";
+    stylix.url = "github:danth/stylix?ref=83645322fd2214b06cf01623f1774fe58cfc3520";
     hyprpanel.url = "github:Jas-SinghFSU/HyprPanel";
     home-manager = {
       url = "github:nix-community/home-manager";

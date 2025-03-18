@@ -5,7 +5,7 @@
     enable = true;
     settings = {
       main = {
-        icon-theme = "Adwaita";
+        icon-theme = "BeautyLine";
         terminal = "kitty";
         font = lib.mkForce "JetBrainsMono NF:size=10";
         use-bold = "yes";
