@@ -25,6 +25,7 @@
       qbittorrent
       git-credential-manager
       hyprpolkitagent
+      lutris
     ];
     file = {
       "./.config/uwsm".source = ./confz/uwsm;
