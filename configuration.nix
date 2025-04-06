@@ -76,6 +76,7 @@
     sweet
     bibata-cursors
     xdg-user-dirs
+    file-roller
   ];
 
   programs = {
@@ -93,6 +94,7 @@
       plugins = with pkgs.xfce; [
         thunar-archive-plugin
         thunar-media-tags-plugin
+        thunar-volman
       ];
     };
   };
