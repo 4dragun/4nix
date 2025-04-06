@@ -1,4 +1,4 @@
-{ inputs, config, pkgs, lib, ... }:
+{ inputs, config, pkgs, ... }:
 
 {
   programs.fuzzel = {
@@ -7,7 +7,7 @@
       main = {
         icon-theme = "BeautyLine";
         terminal = "kitty";
-        font = lib.mkForce "JetBrainsMono NF:size=10";
+        font = "JetBrainsMono NF:size=10";
         use-bold = "yes";
         launch-prefix = "'uwsm app -- '";
       };

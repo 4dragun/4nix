@@ -1,5 +1,4 @@
 #!/usr/bin/env bash
-
 cd ~/4nix
 echo " GIT COMMIT AUTOMATION STARTED..."
 git add .

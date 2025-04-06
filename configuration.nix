@@ -3,8 +3,8 @@
 {
   imports = [ 
     ./hardware-configuration.nix
-    ./modulez/+bafish.nix
-    ./modulez/+stylix.nix
+    ./modulez/bafish.nix
+    ./modulez/fish.nix
   ];
 
   boot.loader = {
@@ -42,16 +42,59 @@
     };
   };
 
+  environment.systemPackages = with pkgs; [
+    brave
+    gnome-boxes
+    hyprpicker
+    hyprsysteminfo
+    hyprpaper
+    brightnessctl
+    hypridle
+    wl-clipboard
+    udiskie
+    clipse
+    emote
+    pavucontrol
+    eog
+    grimblast
+    telegram-desktop
+    qbittorrent
+    git-credential-manager
+    hyprpolkitagent
+    lsd
+    fastfetch
+    btop
+    mpv
+    swaynotificationcenter
+    swayosd
+    waybar
+    networkmanagerapplet
+    nwg-look
+    fuzzel
+    kitty
+    beauty-line-icon-theme
+    sweet
+    bibata-cursors
+    xdg-user-dirs
+  ];
+
   programs = {
     hyprland = {
       enable = true;
       withUWSM  = true;
     };
-    nh = {
-      enable = true;
-      flake = "/home/nixy/4nix";
-    };
     hyprlock.enable = true;
+    yazi.enable = true;
+    bat.enable = true;
+    git.enable = true;
+    xfconf.enable = true;
+    thunar = {
+      enable = true;
+      plugins = with pkgs.xfce; [
+        thunar-archive-plugin
+        thunar-media-tags-plugin
+      ];
+    };
   };
 
   services = {
@@ -62,26 +105,18 @@
     displayManager.sddm = {
       enable = true;
       wayland.enable = true;
-      autoNumlock = true;
     };
     udisks2.enable = true;
-    upower.enable = true;
+    gvfs.enable = true;
+    tumbler.enable = true;
     blueman.enable = true;
-    hypridle.enable = true;
     power-profiles-daemon.enable = true;
   };
 
-  # EDIT THIS STUFFF
-  # services.pipewire.extraConfig.pipewire."92-low-latency" = {
-  #   "context.properties" = {
-  #     "default.clock.rate" = 48000;
-  #     "default.clock.quantum" = 2400;
-  #     "default.clock.min-quantum" = 2400;
-  #     "default.clock.max-quantum" = 2400;
-  #   };
-  # };
-
   fonts.packages = with pkgs; [
+    fira-sans
+    font-awesome
+    nerd-fonts.jetbrains-mono
     noto-fonts
     noto-fonts-lgc-plus
     noto-fonts-cjk-sans
@@ -94,7 +129,7 @@
     powerOnBoot = false;
   };
 
-  systemd.sleep.extraConfig = "HibernateDelaySec=30m";
+  systemd.sleep.extraConfig = "HibernateDelaySec=1800";
   nixpkgs.config.allowUnfree = true;
   nix.settings.experimental-features = [ "nix-command" "flakes" ];
   system.stateVersion = "24.11";
