@@ -81,7 +81,7 @@
   gtk = {
     enable = true;
     gtk3 = {
-       iconTheme.name = "Tela-circle-dracula-dark";
+       iconTheme.name = "matutela";
        extraCss = "@import 'colors.css';";
        theme = {
 	 package = pkgs.adw-gtk3;
@@ -91,7 +91,7 @@
        cursorTheme.name = "Bibata-Modern-Classic";
     };
     gtk4 = {
-       iconTheme.name = "Tela-circle-dracula-dark";
+       iconTheme.name = "matutela";
        extraCss = "@import 'colors.css';";
        theme = {
 	  package = pkgs.adw-gtk3;
