@@ -7,7 +7,7 @@
     userEmail = "4";
     extraConfig = {
       credential = {
-        credentialStore = "cache";
+        credentialStore = "cache rgergergerg";
         cacheOptions = "--timeout 3600";
         helper = [ "" "/run/current-system/sw/bin/git-credential-manager" ];
       };
