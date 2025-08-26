@@ -87,6 +87,7 @@
   imports = [
     ./modules/home-manager/nvchad.nix
     ./modules/home-manager/gtk.nix
+    ./modules/home-manager/git.nix
   ];
 
   
