@@ -102,6 +102,7 @@
        hyprpaper
        fastfetch
        pavucontrol
+       git-credential-manager
        inputs.matugen.packages.${system}.default
   ];
 
