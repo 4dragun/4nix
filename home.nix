@@ -1,4 +1,4 @@
-{ config, pkgs, ... }:
+{ config, pkgs, inputs, ... }:
 
 {
   # Home Manager needs a bit of information about you and the paths it should
@@ -72,38 +72,23 @@
   };
 
   # Let Home Manager install and manage itself.
-  programs.home-manager.enable = true;
-  
+  programs = {
+    home-manager.enable = true;
+    starship.enable = true;
+    waybar.enable = true;
+    yazi.enable = true;
+    # git.enable = true;
+  };
 
   services.swaync.enable = true;
+  services.network-manager-applet.enable = true;
+  services.clipse.enable = true;
   
+  imports = [
+    ./modules/home-manager/nvchad.nix
+    ./modules/home-manager/gtk.nix
+  ];
 
-  gtk = {
-    enable = true;
-    gtk3 = {
-       iconTheme.name = "matutela";
-       extraCss = "@import 'colors.css';";
-       theme = {
-	 package = pkgs.adw-gtk3;
-	 name = "adw-gtk3-dark";
-       };
-       font.name = "Rubik Regular";
-       cursorTheme.name = "Bibata-Modern-Classic";
-    };
-    gtk4 = {
-       iconTheme.name = "matutela";
-       extraCss = "@import 'colors.css';";
-       theme = {
-	  package = pkgs.adw-gtk3;
-	  name = "adw-gtk3-dark";
-       };
-       font.name = "Rubik Regular";
-       cursorTheme.name = "Bibata-Modern-Classic";
-    };
-
-  }; 
-
-
-
+  
 
 }

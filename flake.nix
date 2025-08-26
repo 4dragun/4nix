@@ -8,6 +8,10 @@
     matugen.url = "github:/Iniox/Matugen";
     home-manager.url = "github:nix-community/home-manager";
     home-manager.inputs.nixpkgs.follows = "nixpkgs";
+    nix4nvchad = {
+      url = "github:nix-community/nix4nvchad";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
   };
 
   outputs = inputs@{ self, nixpkgs, home-manager, ... }: {
@@ -20,9 +24,12 @@
         home-manager.nixosModules.home-manager
         {
    
-        home-manager.useGlobalPkgs = true;
-            home-manager.useUserPackages = true;
-            home-manager.users.nixy = ./home.nix;             
+        home-manager = {
+           extraSpecialArgs = { inherit inputs; };
+	   useGlobalPkgs = true;
+           useUserPackages = true;
+            users.nixy = ./home.nix;
+	};
  
         }
       ];

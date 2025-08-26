@@ -63,6 +63,7 @@
         enable = true;
         wayland.enable = true;
      };
+     power-profiles-daemon.enable = true;
   };
 
   # Enable touchpad support (enabled default in most desktopManager).
@@ -76,14 +77,14 @@
 
    programs = {
       hyprland.enable = true;
-      git.enable = true;
-      waybar.enable = true;
-      yazi.enable = true;
-      neovim.enable = true;
-      nm-applet.enable = true;
+      # git.enable = true;
+      # waybar.enable = true;
+      # yazi.enable = true;
+      # neovim.enable = true;
+      # nm-applet.enable = true;
       hyprlock.enable = true;
       fish.enable = true;
-      starship.enable = true;
+      # starship.enable = true;
    };
 
   # List packages installed in system profile.
