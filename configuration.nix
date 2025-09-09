@@ -1,6 +1,21 @@
 { config, pkgs, inputs, ... }:
 
+let
+  activationScript = ''
+    # will be rebuilt automatically
+    rm -fv "$HOME/.cache/ksycoca"*
+  '';
+in
+
 {
+  system.userActivationScripts.rebuildSycoca = activationScript;
+  systemd.user.services.nixos-rebuild-sycoca = {
+    description = "Rebuild KDE system configuration cache";
+    wantedBy = [ "graphical-session-pre.target" ];
+    serviceConfig.Type = "oneshot";
+    script = activationScript;
+  };
+
   imports = [
     ./hardware-configuration.nix
   ];

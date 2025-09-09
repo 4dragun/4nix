@@ -59,20 +59,20 @@
           font_family = "Rubik Regular";
           position = "890, 520";
         }
-        {
-          text = cmd[update:1000] echo "$(~/4nix/scripts/internal/hyprlock_bat.sh)"
-          color = $primary_fixed
-          font_size = 11
-          font_family = Rubik Regular
-          position = 760, 520
-        }
-        {
-          text = cmd[update:1000] echo "$(date "+%A %b %d")"
-          color = $primary
-          font_size = 15
-          font_family = Rubik Regular
-          position = 0, 253
-        }
+        # {
+        #   text = cmd[update:1000] echo "$(~/4nix/scripts/internal/hyprlock_bat.sh)"
+        #   color = $primary_fixed
+        #   font_size = 11
+        #   font_family = Rubik Regular
+        #   position = 760, 520
+        # }
+        # {
+        #   text = cmd[update:1000] echo "$(date "+%A %b %d")"
+        #   color = $primary
+        #   font_size = 15
+        #   font_family = Rubik Regular
+        #   position = 0, 253
+        # }
       ];
     };
   };
