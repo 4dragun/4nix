@@ -19,6 +19,7 @@
       pavucontrol
       darkly
       kdePackages.kdialog
+      kdePackages.plasma-workspace
     ];
 
     file = {
@@ -38,13 +39,13 @@
     };
   };
 
-  xdg.portal = {
-    enable = true;
-    config.hyprland.default = "hyprland;kde";
-    extraPortals = with pkgs; [
-      kdePackages.xdg-desktop-portal-kde
-    ];
-  };
+  # xdg.portal = {
+  #   enable = true;
+  #   config.hyprland.default = "hyprland;kde";
+  #   extraPortals = with pkgs; [
+  #     kdePackages.xdg-desktop-portal-kde
+  #   ];
+  # };
 
   programs = {
     home-manager.enable = true;

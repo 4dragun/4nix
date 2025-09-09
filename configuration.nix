@@ -47,6 +47,15 @@ in
   };
   # virtualisation.libvirtd.enable = true;
 
+  xdg.portal = {
+    enable = true;
+    xdgOpenUsePortal = true;
+    config.hyprland.default = "hyprland;kde";
+    extraPortals = with pkgs; [
+      kdePackages.xdg-desktop-portal-kde
+    ];
+  };
+
   services = {
     udisks2.enable = true;
     power-profiles-daemon.enable = true;
