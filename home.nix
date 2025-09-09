@@ -16,15 +16,20 @@
       brightnessctl
       libnotify
       git-credential-manager
+      pavucontrol
       darkly
       kdePackages.kdialog
     ];
 
     file = {
-      # ".screenrc".source = dotfiles/screenrc;
+      ".config/nvim/lua/chadrc.lua".source = dotfiles/chadrc.lua;
+      ".config/hypr/hyprland.conf".source = dotfiles/hyprland.conf;
       ".config/kwalletrc".text = ''
         [Wallet]
         Enabled=false
+      '';
+      ".config/hypr/application-style.conf".text = ''
+        roundness = 2
       '';
     };
 
@@ -49,7 +54,10 @@
   };
 
   services = {
-    hyprpaper.enable = true;
+    hyprpaper = {
+      enable = true;
+      settings = { x = "x"; };
+    };
     clipse.enable = true;
   };
 
@@ -63,5 +71,7 @@
     ./modules/home-manager/kitty.nix
     ./modules/home-manager/fish.nix
     ./modules/home-manager/git.nix
+    ./modules/home-manager/hypridle.nix
+    ./modules/home-manager/hyprlock.nix
   ];
 }

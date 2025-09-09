@@ -26,7 +26,10 @@
     })
   ];
   
-  security.rtkit.enable = true;
+  security = {
+    rtkit.enable = true;
+    pam.services.hyprlock.enable = true;
+  };
   # virtualisation.libvirtd.enable = true;
 
   services = {
