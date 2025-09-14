@@ -3,7 +3,6 @@
 {
   programs.rofi = {
     enable = true;
-    package = pkgs.rofi-wayland;
     extraConfig = {
       font = "Rubik 12";
       display-drun = "";

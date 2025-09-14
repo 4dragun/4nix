@@ -1,6 +1,7 @@
 { config, pkgs, inputs, ... }:
 
 let
+  kdePackages = pkgs.kdePackages;
   activationScript = ''
     # will be rebuilt automatically
     rm -fv "$HOME/.cache/ksycoca"*
@@ -15,6 +16,16 @@ in
     serviceConfig.Type = "oneshot";
     script = activationScript;
   };
+  environment.sessionVariables.XDG_CONFIG_DIRS = [ "$HOME/.config/kdedefaults" ];
+
+    # Needed for things that depend on other store.kde.org packages to install correctly,
+    # notably Plasma look-and-feel packages (a.k.a. Global Themes)
+    #
+    # FIXME: this is annoyingly impure and should really be fixed at source level somehow,
+    # but kpackage is a library so we can't just wrap the one thing invoking it and be done.
+    # This also means things won't work for people not on Plasma, but at least this way it
+    # works for SOME people.
+    environment.sessionVariables.KPACKAGE_DEP_RESOLVERS_PATH = "${kdePackages.frameworkintegration.out}/libexec/kf6/kpackagehandlers";
 
   imports = [
     ./hardware-configuration.nix
@@ -34,6 +45,8 @@ in
 
   # Enable the X11 windowing system.
   # services.xserver.enable = true;
+
+  hardware.bluetooth.enable = true;
   
   nixpkgs.overlays = [
     (final: prev: {
@@ -46,7 +59,9 @@ in
     pam.services.hyprlock.enable = true;
   };
   # virtualisation.libvirtd.enable = true;
-
+  
+  xdg.menus.enable = true;
+  xdg.mime.enable = true;
   xdg.portal = {
     enable = true;
     xdgOpenUsePortal = true;
@@ -59,6 +74,7 @@ in
   services = {
     udisks2.enable = true;
     power-profiles-daemon.enable = true;
+    blueman.enable = true;
 
     pipewire = {
       enable = true;
@@ -108,6 +124,8 @@ in
     rubik
     nerd-fonts.jetbrains-mono
   ];
+
+  nix.settings.experimental-features = [ "nix-command" "flakes" ];
 
   # Copy the NixOS configuration file and link it from the resulting system
   # (/run/current-system/configuration.nix). This is useful in case you
